@@ -1,0 +1,208 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    background-color: #6b5e3e;
+    color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.wrapper_img {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    width: 80px;
+    height: auto;
+}
+
+.center_buttons {
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+    margin: 0 20px;
+}
+
+.filter_button {
+    padding: 10px;
+    background-color: #c04f4f;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 1;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter_button:hover {
+    background-color: #a63b3b;
+    transform: scale(1.05);
+}
+
+.search_section {
+    display: flex;
+    align-items: center;
+}
+
+.filter_input {
+    padding: 8px;
+    border: 1px solid #4a3829;
+    border-radius: 4px;
+    background-color: #d2c1a6;
+    color: #4a3829;
+    font-size: 16px;
+}
+
+.filter_input::placeholder {
+    color: #4a3829;
+}
+
+.search_button {
+    padding: 8px 16px;
+    background-color: #5A501A;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search_button:hover {
+    background-color: #9c8f49;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1600px) {
+    .filter_button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .header_logo {
+        width: 100px;
+    }
+
+    .filter_input {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .search_button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .filter_button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .header_logo {
+        width: 80px;
+    }
+
+    .filter_input {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .search_button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .center_buttons {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .filter_button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .header_logo {
+        width: 70px;
+    }
+
+    .filter_input {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .search_button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .center_buttons {
+        visibility: hidden;
+    }
+
+    .filter_button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .header_logo {
+        width: 60px;
+    }
+
+    .filter_input {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .search_button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .center_buttons {
+        display: none;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .filter_input {
+        width: 100%;
+        font-size: 14px;
+        padding: 4px;
+    }
+
+    .search_button {
+        width: 100%;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .header_logo {
+        width: 50px;
+    }
+}
