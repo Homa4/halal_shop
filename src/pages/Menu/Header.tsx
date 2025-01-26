@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import { memo, useContext } from "react";
 import "./Header.css";
 import logo from "../../images/halal_logo.png";
 import { ContextForFilter } from "../../Context/FilterContext";

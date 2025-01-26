@@ -10,13 +10,8 @@ export const ContextForOverview = createContext<
   OverviewContextType | undefined
 >(undefined);
 
-enum ActionKind {
-  AddToState = "AddToState",
-  DeleteFromState = "DeleteFromState",
-}
-
 interface CountAction {
-  type: ActionKind;
+  type: string;
   payload?: Product;
 }
 
@@ -31,10 +26,10 @@ function OverviewContext({ children }: OverviewContextProps) {
   ): Product | undefined => {
     const { type, payload } = action;
     switch (type) {
-      case ActionKind.AddToState:
+      case "AddToState":
         console.log(state);
         return payload;
-      case ActionKind.DeleteFromState:
+      case "DeleteFromState":
         console.log(state);
         return undefined;
       default:

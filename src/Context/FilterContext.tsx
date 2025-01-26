@@ -1,4 +1,4 @@
-import { useState, createContext, ReactNode } from "react";
+import React, { useState, createContext, ReactNode } from "react";
 
 interface InitialObj {
   category: string;
@@ -9,9 +9,8 @@ interface ContextForFilterType {
   setCategory: (category: string) => void;
 }
 
-export const ContextForFilter = createContext<ContextForFilterType | undefined>(
-  undefined
-);
+export const ContextForFilter: React.Context<ContextForFilterType | undefined> =
+  createContext<ContextForFilterType | undefined>(undefined);
 
 interface FilterContext {
   children: ReactNode;

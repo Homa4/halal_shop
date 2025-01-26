@@ -12,7 +12,6 @@
 
 .show_more_btn {
     background-color: #736c22;
-    /* Зелений колір з палітри */
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -24,20 +23,14 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin: 20px auto;
     display: block;
-    /* Центрування кнопки */
 }
 
-/* Ефекти при наведенні */
 .show_more_btn:hover {
     background-color: #5a501a;
-    /* Темніший зелений */
     transform: scale(1.05);
-    /* Легке збільшення */
 }
 
-/* Ефекти при фокусі */
 .show_more_btn:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(115, 108, 34, 0.5);
-    /* Рамка фокусу */
 }

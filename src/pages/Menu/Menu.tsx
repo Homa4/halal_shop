@@ -8,25 +8,32 @@ import Header from "./Header";
 import "./Menu.css";
 import Button from "../../components/Button";
 import { ContextForFilter } from "../../Context/FilterContext";
+
 const url: string = "https://dummyjson.com/products";
 
 function Menu(): React.ReactElement {
-  const { data } = useFetch(url);
+  const data = useFetch<{ products: Product[] }>(url);
   console.log(data);
+
   const context = useContext(ContextForFilter);
+
+  if (!context) {
+    throw new Error(
+      "ContextForFilter must be used within a FilterContext provider."
+    );
+  }
+
   const { settingObj } = context;
   const [itemNumber, setItemNumber] = useState(8);
 
-  let products: Product[];
+  let product: Product[] = [];
 
   if (settingObj.category === "all") {
-    products = data?.products.slice(0, itemNumber) || [];
+    product = data?.products.slice(0, itemNumber) || [];
   } else {
-    products =
+    product =
       data?.products
-        .filter((element: Product) => {
-          return element.category === settingObj.category;
-        })
+        .filter((element: Product) => element.category === settingObj.category)
         .slice(0, itemNumber) || [];
     console.log(settingObj);
   }
@@ -39,8 +46,8 @@ function Menu(): React.ReactElement {
     <div className="menu_wrapper">
       <Header />
       <div className="item_wrapper">
-        {products.length > 0 ? (
-          products.map((element: Product) => (
+        {product.length > 0 ? (
+          product.map((element: Product) => (
             <Item key={element.id} element={element} />
           ))
         ) : (

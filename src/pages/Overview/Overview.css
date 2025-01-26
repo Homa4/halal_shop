@@ -1,17 +1,19 @@
-/* Основні стилі картки */
 .overview {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
     background-color: #B18E76;
-    /* Бежевий */
+
+
     border: 2px solid #4D3026;
-    /* Темно-коричневий */
+
+
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
     color: #4D3026;
-    /* Темно-коричневий */
+
+
 }
 
 .overview_header {
@@ -26,7 +28,8 @@
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #80782B;
-    /* Оливковий */
+
+
     margin-right: 20px;
 }
 
@@ -38,7 +41,8 @@
     font-size: 24px;
     font-weight: bold;
     color: #5C4F0E;
-    /* Темно-оливковий */
+
+
     margin-bottom: 10px;
 }
 
@@ -70,13 +74,15 @@
 .overview_return h2 {
     font-size: 20px;
     color: #5C4F0E;
-    /* Темно-оливковий */
+
+
     margin-bottom: 10px;
 }
 
 .overview_review {
     background-color: #C35C67;
-    /* Рожевий */
+
+
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -93,12 +99,14 @@
     width: 100px;
     height: 100px;
     border: 1px solid #80782B;
-    /* Оливковий */
+
+
 }
 
 .go_back_button {
     background-color: #4D3026;
-    /* Темно-коричневий */
+
+
     color: white;
     padding: 10px 15px;
     border: none;
@@ -110,12 +118,11 @@
 
 .go_back_button:hover {
     background-color: #80782B;
-    /* Оливковий */
+
+
 }
 
-/* ===== Адаптивність ===== */
 
-/* Для екранів шириною до 1200px */
 @media (max-width: 1200px) {
     .overview {
         max-width: 90%;
@@ -164,7 +171,6 @@
     }
 }
 
-/* Для екранів шириною до 480px */
 @media (max-width: 480px) {
     .overview {
         padding: 10px;
@@ -199,7 +205,6 @@
     }
 }
 
-/* Для екранів шириною до 320px */
 @media (max-width: 320px) {
     .overview {
         padding: 8px;
@@ -230,48 +235,38 @@
     }
 }
 
-/* Загальні стилі галереї */
 .gallery_passive {
     display: none;
-    /* Галерея прихована за замовчуванням */
 }
 
 .gallery_active {
     display: flex;
-    /* Відображення галереї */
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-    /* Темний напівпрозорий фон */
     justify-content: center;
     align-items: center;
     z-index: 1000;
     overflow: hidden;
 }
 
-/* Контейнер для зображення */
 .gallery_img_container {
     background-color: #222;
-    /* Темно-сірий фон для контейнера */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    /* Тінь для контейнера */
     text-align: center;
 }
 
 .gallery_img {
     max-width: 90vw;
-    /* Зображення адаптується до розміру екрана */
     max-height: 80vh;
     border-radius: 5px;
 }
 
-
-/* Закриття галереї */
 .gallery_close_button {
     position: absolute;
     top: 20px;
@@ -286,7 +281,6 @@
 
 .gallery_close_button:hover {
     color: #f1c40f;
-    /* Жовтий при наведенні */
 }
 
 .gallery_arrow {
